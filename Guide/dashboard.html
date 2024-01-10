@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>3. Platform Introduction Tutorial &#8212; MYCELIUM  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=83e35b93" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css?v=79c92029" />
+    <link rel="stylesheet" type="text/css" href="../_static/_style.css?v=a28cf678" />
+    <link rel="stylesheet" type="text/css" href="../_static/_style.css?v=a28cf678" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Create a Kubeflow Notebook" href="../Examples/notebooks.html" />
+    <link rel="prev" title="2. Getting Started with Kubeflow" href="kubeflow.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=white data-md-color-accent=black>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#Guide/dashboard" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="MYCELIUM  documentation"
+           class="md-header-nav__button md-logo">
+          
+            &nbsp;
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">MYCELIUM</span>
+          <span class="md-header-nav__topic"> 3. Platform Introduction Tutorial </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">MYCELIUM  documentation</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="MYCELIUM documentation" class="md-nav__button md-logo">
+      
+        <img src="../_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../index.html"
+       title="MYCELIUM documentation">MYCELIUM</a>
+  </label>
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">INTRODUCTION</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="purpose.html" class="md-nav__link">1. Statement of Purpose</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="guidelines.html" class="md-nav__link">2. Rules and Procedure</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="chain-of-command.html" class="md-nav__link">3. Chain of Command</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">GUIDE</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="ci-cd.html" class="md-nav__link">1. CI-CD Procedures</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="kubeflow.html" class="md-nav__link">2. Getting Started with Kubeflow</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> 3. Platform Introduction Tutorial </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">3. Platform Introduction Tutorial</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#guide-dashboard--page-root" class="md-nav__link">3. Platform Introduction Tutorial</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#structure-of-the-platform" class="md-nav__link">3.1. Structure of the Platform</a>
+        </li>
+        <li class="md-nav__item"><a href="#project-management" class="md-nav__link">3.2. Project Management</a>
+        </li>
+        <li class="md-nav__item"><a href="#monitoring-tools" class="md-nav__link">3.3. Monitoring Tools</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/Guide/dashboard.rst.txt">Show Source</a> </li>
+
+  </ul>
+</nav>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">EXAMPLES</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/notebooks.html" class="md-nav__link">1. Create a Kubeflow Notebook</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/katib.html" class="md-nav__link">2. Optimize Parameters</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/tensorboards.html" class="md-nav__link">3. Visualize Train and Test Results</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/plot-overview.html" class="md-nav__link">4. Plotting</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">REFERENCES</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium.html" class="md-nav__link">Mycelium.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">database/</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Inchworm.html" class="md-nav__link">Inchworm.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Tree.html" class="md-nav__link">Tree.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Branch.html" class="md-nav__link">Branch.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Crawler.html" class="md-nav__link">Crawler.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">models/</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Hyphae.html" class="md-nav__link">Hyphae.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/LLAMA.html" class="md-nav__link">LLAMA.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Psilocybin.html" class="md-nav__link">Psilocybin.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">analytics/</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Plot.html" class="md-nav__link">Plot.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Cap.html" class="md-nav__link">Cap.py</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#guide-dashboard--page-root" class="md-nav__link">3. Platform Introduction Tutorial</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#structure-of-the-platform" class="md-nav__link">3.1. Structure of the Platform</a>
+        </li>
+        <li class="md-nav__item"><a href="#project-management" class="md-nav__link">3.2. Project Management</a>
+        </li>
+        <li class="md-nav__item"><a href="#monitoring-tools" class="md-nav__link">3.3. Monitoring Tools</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/Guide/dashboard.rst.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="platform-introduction-tutorial">
+<span id="the-kubeflow-dashboard"></span><h1 id="guide-dashboard--page-root"><span class="section-number">3. </span>Platform Introduction Tutorial<a class="headerlink" href="#guide-dashboard--page-root" title="Link to this heading">¶</a></h1>
+<p>In this tutorial, you will learn how to navigate and utilize the various features of our platform. You can access the Kubeflow dashboad at <a class="reference external" href="https://kubeflow.prod.slo.ca.vai-compute.com">https://kubeflow.prod.slo.ca.vai-compute.com</a>. The UI includes the following:
+Let’s dive in!</p>
+<img alt="../_images/homepage.png" src="../_images/homepage.png"/>
+<section id="structure-of-the-platform">
+<h2 id="structure-of-the-platform"><span class="section-number">3.1. </span>Structure of the Platform<a class="headerlink" href="#structure-of-the-platform" title="Link to this heading">¶</a></h2>
+<table>
+<colgroup>
+<col style="width: 10.0%"/>
+<col style="width: 90.0%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>1. Notebook Servers</strong>:</p></td>
+<td><p>Start by launching Jupyter notebook servers. These are essential tools for data scientists, allowing for rapid prototyping and development. You can create, edit, and manage your Jupyter notebooks here.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2. Models</strong>:</p></td>
+<td><p>Next, you’ll want to manage your machine learning models. Our platform uses KFServing, a serverless framework that allows for the deployment of machine learning models in a Kubernetes environment.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3. Volumes</strong>:</p></td>
+<td><p>Lastly, under structure, you’ll find where you can manage your storage volumes. These are associated with your Kubeflow cluster and can be used to store data, model artifacts, and more.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="project-management">
+<h2 id="project-management"><span class="section-number">3.2. </span>Project Management<a class="headerlink" href="#project-management" title="Link to this heading">¶</a></h2>
+<table>
+<colgroup>
+<col style="width: 10.0%"/>
+<col style="width: 90.0%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>1. Pipelines</strong>:</p></td>
+<td><p>Moving on to project management, you’ll first encounter Kubeflow Pipelines (KFP). These are end-to-end workflows that are reusable and reproducible, allowing you to build, evaluate, deploy, and validate ML models.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2. Experiments (AutoML)</strong>:</p></td>
+<td><p>You can also manage Katib experiments here. Katib is a Kubernetes-native project for automated machine learning (AutoML) that supports hyperparameter tuning, early stopping, and neural architecture search.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3. Experiments (KFP)</strong>:</p></td>
+<td><p>In addition to Katib experiments, you can manage experiments in Kubeflow Pipelines. An experiment in KFP represents a workspace where you can try different configurations of your pipelines.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>4. Runs</strong>:</p></td>
+<td><p>This is where you can manage individual runs of your KFP pipelines. A run represents a single execution of a pipeline.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5. Recurring Runs</strong>:</p></td>
+<td><p>Lastly for project management, you can set up recurring runs in KFP. A recurring run is a repeatable run of a pipeline.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="monitoring-tools">
+<h2 id="monitoring-tools"><span class="section-number">3.3. </span>Monitoring Tools<a class="headerlink" href="#monitoring-tools" title="Link to this heading">¶</a></h2>
+<table>
+<colgroup>
+<col style="width: 10.0%"/>
+<col style="width: 90.0%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>1. TensorBoards</strong>:</p></td>
+<td><p>Under monitoring tools, you’ll first find TensorBoard servers. TensorBoard provides visualization and tooling for machine learning experimentation.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2. Artifacts</strong>:</p></td>
+<td><p>You can also track ML Metadata (MLMD) artifacts here. An artifact represents an input or an output of individual steps in an ML workflow.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3. Executions</strong>:</p></td>
+<td><p>Lastly, this is where you can track various component executions in MLMD.</p></td>
+</tr>
+</tbody>
+</table>
+<p>And that’s it! You’re now ready to start exploring and utilizing the platform to its fullest potential.</p>
+<p>Now that you have seen the platform, we can show you what happens under the hood by introducing pipelines.</p>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="kubeflow.html" title="2. Getting Started with Kubeflow"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> "Previous" </span> <span class="section-number">2. </span>Getting Started with Kubeflow </span>
+              </div>
+            </a>
+          
+          
+            <a href="../Examples/notebooks.html" title="1. Create a Kubeflow Notebook"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> "Next" </span> <span class="section-number">1. </span>Create a Kubeflow Notebook </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright CONFIDENTIAL - Do Not Distribute. Copyright will be enforced..
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>

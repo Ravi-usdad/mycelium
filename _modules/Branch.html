@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Branch &#8212; MYCELIUM  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=83e35b93" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css?v=79c92029" />
+    <link rel="stylesheet" type="text/css" href="../_static/_style.css?v=a28cf678" />
+    <link rel="stylesheet" type="text/css" href="../_static/_style.css?v=a28cf678" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=white data-md-color-accent=black>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#_modules/Branch" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="MYCELIUM  documentation"
+           class="md-header-nav__button md-logo">
+          
+            &nbsp;
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">MYCELIUM</span>
+          <span class="md-header-nav__topic"> Branch </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">MYCELIUM  documentation</a></li>
+          <li class="md-tabs__item"><a href="index.html" class="md-tabs__link">Module code</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="MYCELIUM documentation" class="md-nav__button md-logo">
+      
+        <img src="../_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../index.html"
+       title="MYCELIUM documentation">MYCELIUM</a>
+  </label>
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">INTRODUCTION</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Guide/purpose.html" class="md-nav__link">1. Statement of Purpose</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Guide/guidelines.html" class="md-nav__link">2. Rules and Procedure</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Guide/chain-of-command.html" class="md-nav__link">3. Chain of Command</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">GUIDE</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Guide/ci-cd.html" class="md-nav__link">1. CI-CD Procedures</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Guide/kubeflow.html" class="md-nav__link">2. Getting Started with Kubeflow</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Guide/dashboard.html" class="md-nav__link">3. Platform Introduction Tutorial</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">EXAMPLES</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/notebooks.html" class="md-nav__link">1. Create a Kubeflow Notebook</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/katib.html" class="md-nav__link">2. Optimize Parameters</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/tensorboards.html" class="md-nav__link">3. Visualize Train and Test Results</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/plot-overview.html" class="md-nav__link">4. Plotting</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">REFERENCES</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium.html" class="md-nav__link">Mycelium.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">database/</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Inchworm.html" class="md-nav__link">Inchworm.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Tree.html" class="md-nav__link">Tree.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Branch.html" class="md-nav__link">Branch.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Crawler.html" class="md-nav__link">Crawler.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">models/</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Hyphae.html" class="md-nav__link">Hyphae.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/LLAMA.html" class="md-nav__link">LLAMA.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Psilocybin.html" class="md-nav__link">Psilocybin.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">analytics/</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Plot.html" class="md-nav__link">Plot.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Cap.html" class="md-nav__link">Cap.py</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <h1 id="modules-branch--page-root">Source code for Branch</h1><div class="highlight"><pre>
+<span></span><span class="c1"># standard imports</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">socket</span><span class="o">,</span> <span class="nn">psutil</span><span class="o">,</span> <span class="nn">uuid</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># checks and balances</span>
+<span class="kn">from</span> <span class="nn">mycelium.utils</span> <span class="kn">import</span> <span class="p">(</span><span class="n">performance</span><span class="p">,</span> <span class="n">events</span><span class="p">,</span> <span class="n">observe</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="VectorDBLet">
+<a class="viewcode-back" href="../References/Mycelium/Branch.html#Branch.VectorDBLet">[docs]</a>
+<span class="k">class</span> <span class="nc">VectorDBLet</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">list</span><span class="o">=</span><span class="p">[],</span> <span class="n">adj_list</span><span class="p">:</span> <span class="nb">list</span><span class="o">=</span><span class="p">[],</span> <span class="n">data_path</span><span class="o">=</span><span class="s1">'../../data/'</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">            A class of methods for loading, organizing, and summarizing smaller databases related to a node or in communication with neighbors.</span>
+<span class="sd">            Calling this class creates a new subgraph if one does not already exist.</span>
+
+<span class="sd">            :param nodes: The nodes of the graph.</span>
+<span class="sd">            :param adj_list: The adjacency list of the graph.</span>
+
+<span class="sd">            :example:</span>
+
+<span class="sd">                &gt;&gt;&gt; my_nodule.load_data(nodes, adj_list)</span>
+
+<span class="sd">        """</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">url_to_index</span> <span class="o">=</span> <span class="p">{}</span>
+
+    
+        <span class="c1"># add payload data, if exists</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_data</span><span class="p">():</span>  
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">data_path</span><span class="si">}</span><span class="s1">nodes.csv'</span><span class="p">)</span>   <span class="c1"># get it</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">adj_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">data_path</span><span class="si">}</span><span class="s1">/edges.csv'</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>  <span class="c1"># handled below</span>
+
+            <span class="k">if</span> <span class="n">nodes</span><span class="p">:</span>  <span class="c1"># if not, add payload data if exists TODO might need to </span>
+                <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_exists</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">url</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="o">+=</span> <span class="p">{</span>
+                            <span class="s2">"id"</span><span class="p">:</span> <span class="n">node</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                            <span class="s2">"url"</span><span class="p">:</span> <span class="n">node</span><span class="o">.</span><span class="n">url</span><span class="p">,</span>
+                            <span class="s2">"type"</span><span class="p">:</span> <span class="n">node</span><span class="o">.</span><span class="n">type</span><span class="p">,</span>
+                            <span class="s2">"properties"</span><span class="p">:</span> <span class="n">node</span><span class="o">.</span><span class="n">properties</span><span class="p">,</span>
+                            <span class="s2">"description"</span><span class="p">:</span> <span class="n">node</span><span class="o">.</span><span class="n">description</span><span class="p">,</span>
+                            <span class="s2">"embeddings"</span><span class="p">:</span> <span class="n">node</span><span class="o">.</span><span class="n">embeddings</span><span class="p">,</span>
+                        <span class="p">}</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">"Node already exists... Skipping node"</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">adj_list</span><span class="p">:</span>  <span class="c1"># if not, get local data if exists</span>
+                <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">adj_list</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_exists</span><span class="p">(</span><span class="n">edge</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="n">edge</span><span class="o">.</span><span class="n">target</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">adj_list</span> <span class="o">+=</span> <span class="p">[{</span>
+                            <span class="s2">"source"</span><span class="p">:</span> <span class="n">edge</span><span class="o">.</span><span class="n">source</span><span class="p">,</span>
+                            <span class="s2">"target"</span><span class="p">:</span> <span class="n">edge</span><span class="o">.</span><span class="n">target</span><span class="p">,</span>
+                            <span class="s2">"type"</span><span class="p">:</span> <span class="n">edge</span><span class="o">.</span><span class="n">type</span><span class="p">,</span>
+                            <span class="s2">"properties"</span><span class="p">:</span> <span class="n">edge</span><span class="o">.</span><span class="n">properties</span><span class="p">,</span>
+                        <span class="p">}]</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">"Edge already exists... Skipping edge"</span><span class="p">)</span>
+                    
+        <span class="k">else</span><span class="p">:</span> 
+            <span class="k">if</span> <span class="n">nodes</span> <span class="ow">or</span> <span class="n">adj_list</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">nodes</span><span class="p">:</span>   <span class="c1"># if not, add payload data if exists</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="o">=</span> <span class="n">nodes</span>
+                <span class="k">if</span> <span class="n">adj_list</span><span class="p">:</span>   <span class="c1"># if not, get local data if exists</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">adj_list</span> <span class="o">=</span> <span class="n">adj_list</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Could not find nodes.csv or nodes list... Creating nodules"</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s2">"id"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">"url"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">"type"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">"properties"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">"description"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">"embeddings"</span><span class="p">:</span> <span class="p">[],</span>
+                <span class="p">}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">adj_list</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s2">"source"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">"target"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">"type"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">"properties"</span><span class="p">:</span> <span class="p">[],</span>
+                <span class="p">}</span>
+    
+    
+    <span class="nd">@performance</span><span class="o">.</span><span class="n">timeit</span>
+    <span class="k">def</span> <span class="nf">get_identifier_info</span><span class="p">():</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">            Gets identifier information of the current computer.</span>
+<span class="sd">            </span>
+<span class="sd">        """</span>
+        
+        <span class="n">info</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">"hostname"</span><span class="p">:</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostname</span><span class="p">(),</span>
+            <span class="s2">"mac-address"</span><span class="p">:</span> <span class="s1">':'</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">'</span><span class="si">{:02x}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">uuid</span><span class="o">.</span><span class="n">getnode</span><span class="p">()</span> <span class="o">&gt;&gt;</span> <span class="n">i</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="o">*</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">)][::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">info</span>
+
+    <span class="nd">@performance</span><span class="o">.</span><span class="n">timeit</span>
+    <span class="k">def</span> <span class="nf">check_state</span><span class="p">():</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">            Checks the state of the current computer.</span>
+<span class="sd">            </span>
+<span class="sd">        """</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">"hostname"</span><span class="p">:</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostname</span><span class="p">(),</span>
+            <span class="s2">"mac-address"</span><span class="p">:</span> <span class="s1">':'</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">'</span><span class="si">{:02x}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">uuid</span><span class="o">.</span><span class="n">getnode</span><span class="p">()</span> <span class="o">&gt;&gt;</span> <span class="n">i</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="o">*</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">)][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span>
+            <span class="s2">"cpu-load"</span><span class="p">:</span> <span class="n">psutil</span><span class="o">.</span><span class="n">cpu_percent</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">state</span>
+       
+    <span class="nd">@performance</span><span class="o">.</span><span class="n">timeit</span>
+    <span class="k">def</span> <span class="nf">check_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_path</span><span class="o">=</span><span class="s1">'../../data/'</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">            Checks if the data is available on the local machine.</span>
+
+<span class="sd">            :return: True if the data is available, False otherwise.</span>
+
+<span class="sd">            :example:</span>
+<span class="sd">            </span>
+<span class="sd">                &gt;&gt;&gt; my_nodule.check_data()</span>
+
+<span class="sd">        """</span>
+        
+        <span class="k">try</span><span class="p">:</span> 
+            <span class="k">if</span> <span class="s2">"nodes.csv"</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">data_path</span><span class="si">}</span><span class="s1">/nodes.csv'</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">True</span>
+            <span class="k">elif</span> <span class="s2">"edges.csv"</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">data_path</span><span class="si">}</span><span class="s1">/edges.csv'</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">"Error: Found edges but no nodes. This is not expected."</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>  
+            <span class="k">return</span> <span class="kc">False</span>     
+         
+
+<div class="viewcode-block" id="VectorDBLet.add_node">
+<a class="viewcode-back" href="../References/Mycelium/Branch.html#Branch.VectorDBLet.add_node">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">url_to_index</span><span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">url</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span></div>
+
+
+    <span class="nd">@performance</span><span class="o">.</span><span class="n">timeit</span>
+    <span class="k">def</span> <span class="nf">get_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Checks to see if URL is already in the database.</span>
+
+<span class="sd">        :param url: The URL to be checked.</span>
+
+<span class="sd">        :return: The index of the URL in the database, or None if the URL is not in the database.</span>
+
+<span class="sd">        :example:</span>
+<span class="sd">            &gt;&gt;&gt; my_nodule.get_index(url)</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">url_to_index</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="nd">@performance</span><span class="o">.</span><span class="n">timeit</span>
+    <span class="k">def</span> <span class="nf">summarize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">            Prints a summary of the graph.</span>
+
+<span class="sd">            :example:</span>
+<span class="sd">                &gt;&gt;&gt; subgraph.summarize()</span>
+
+<span class="sd">        """</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Nodes: "</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Edges: "</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">adj_list</span><span class="p">)</span>
+    
+    <span class="nd">@performance</span><span class="o">.</span><span class="n">timeit</span>
+    <span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">            Imports new data into the subgraph.</span>
+
+<span class="sd">            :param data: The data to be imported.</span>
+
+<span class="sd">            :example:</span>
+<span class="sd">                &gt;&gt;&gt; my_nodule.load_data(data)</span>
+
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span></div>
+
+
+
+<div class="viewcode-block" id="TODOs">
+<a class="viewcode-back" href="../References/Mycelium/Branch.html#Branch.TODOs">[docs]</a>
+<span class="k">class</span> <span class="nc">TODOs</span><span class="p">:</span>
+    <span class="nd">@performance</span><span class="o">.</span><span class="n">timeit</span>
+    <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">            Inserts new data</span>
+
+<span class="sd">            :param data: The data to be inserted.</span>
+
+<span class="sd">            :example:</span>
+
+<span class="sd">                &gt;&gt;&gt; my_nodule.insert(data)</span>
+
+<span class="sd">        """</span>
+        <span class="k">pass</span>
+    
+    <span class="nd">@performance</span><span class="o">.</span><span class="n">timeit</span>
+    <span class="k">def</span> <span class="nf">insert_near</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Adds a new node near an existing node.</span>
+
+<span class="sd">        :param data: The data to be inserted.</span>
+<span class="sd">        :param node: The node to be inserted near.</span>
+
+<span class="sd">        :example:</span>
+
+<span class="sd">            &gt;&gt;&gt; my_nodule.insert_near(data, node)</span>
+
+<span class="sd">        """</span>
+        <span class="k">pass</span>
+    
+    <span class="nd">@performance</span><span class="o">.</span><span class="n">timeit</span>
+    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Removes data (data and data type).</span>
+<span class="sd">        """</span>
+        <span class="k">pass</span>
+        
+    <span class="nd">@performance</span><span class="o">.</span><span class="n">timeit</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">new_data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        Updates the data (key-value pairs, embeddings, etc.).</span>
+<span class="sd">        </span>
+<span class="sd">        """</span>
+        <span class="k">pass</span></div>
+
+
+
+</pre></div>
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright CONFIDENTIAL - Do Not Distribute. Copyright will be enforced..
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>

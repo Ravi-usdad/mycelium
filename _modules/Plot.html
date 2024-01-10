@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Plot &#8212; MYCELIUM  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=83e35b93" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css?v=79c92029" />
+    <link rel="stylesheet" type="text/css" href="../_static/_style.css?v=a28cf678" />
+    <link rel="stylesheet" type="text/css" href="../_static/_style.css?v=a28cf678" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=white data-md-color-accent=black>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#_modules/Plot" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="MYCELIUM  documentation"
+           class="md-header-nav__button md-logo">
+          
+            &nbsp;
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">MYCELIUM</span>
+          <span class="md-header-nav__topic"> Plot </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">MYCELIUM  documentation</a></li>
+          <li class="md-tabs__item"><a href="index.html" class="md-tabs__link">Module code</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="MYCELIUM documentation" class="md-nav__button md-logo">
+      
+        <img src="../_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../index.html"
+       title="MYCELIUM documentation">MYCELIUM</a>
+  </label>
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">INTRODUCTION</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Guide/purpose.html" class="md-nav__link">1. Statement of Purpose</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Guide/guidelines.html" class="md-nav__link">2. Rules and Procedure</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Guide/chain-of-command.html" class="md-nav__link">3. Chain of Command</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">GUIDE</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Guide/ci-cd.html" class="md-nav__link">1. CI-CD Procedures</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Guide/kubeflow.html" class="md-nav__link">2. Getting Started with Kubeflow</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Guide/dashboard.html" class="md-nav__link">3. Platform Introduction Tutorial</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">EXAMPLES</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/notebooks.html" class="md-nav__link">1. Create a Kubeflow Notebook</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/katib.html" class="md-nav__link">2. Optimize Parameters</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/tensorboards.html" class="md-nav__link">3. Visualize Train and Test Results</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/plot-overview.html" class="md-nav__link">4. Plotting</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">REFERENCES</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium.html" class="md-nav__link">Mycelium.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">database/</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Inchworm.html" class="md-nav__link">Inchworm.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Tree.html" class="md-nav__link">Tree.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Branch.html" class="md-nav__link">Branch.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Crawler.html" class="md-nav__link">Crawler.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">models/</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Hyphae.html" class="md-nav__link">Hyphae.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/LLAMA.html" class="md-nav__link">LLAMA.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Psilocybin.html" class="md-nav__link">Psilocybin.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">analytics/</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Plot.html" class="md-nav__link">Plot.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Cap.html" class="md-nav__link">Cap.py</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <h1 id="modules-plot--page-root">Source code for Plot</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span> <span class="k">as</span> <span class="n">st</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">colors</span><span class="p">,</span> <span class="n">colormaps</span> <span class="k">as</span> <span class="n">cm</span>
+
+<div class="viewcode-block" id="DefaultColors">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.DefaultColors">[docs]</a>
+<span class="k">class</span> <span class="nc">DefaultColors</span><span class="p">:</span>
+    <span class="n">primary_line</span> <span class="o">=</span> <span class="s1">'black'</span>
+    <span class="n">background_dots</span> <span class="o">=</span> <span class="s1">'white'</span></div>
+
+
+
+<div class="viewcode-block" id="gen_hex_from_cm">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.gen_hex_from_cm">[docs]</a>
+<span class="k">def</span> <span class="nf">gen_hex_from_cm</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">colors</span><span class="o">.</span><span class="n">rgb2hex</span><span class="p">(</span><span class="n">cmap</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cmap</span><span class="o">.</span><span class="n">N</span><span class="p">)]</span></div>
+
+
+
+<div class="viewcode-block" id="PlotGenerator">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator">[docs]</a>
+<span class="k">class</span> <span class="nc">PlotGenerator</span><span class="p">:</span>
+<div class="viewcode-block" id="PlotGenerator.Rank">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator.Rank">[docs]</a>
+    <span class="k">class</span> <span class="nc">Rank</span><span class="p">:</span>
+<div class="viewcode-block" id="PlotGenerator.Rank.vertical_dot_plot">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator.Rank.vertical_dot_plot">[docs]</a>
+        <span class="nd">@staticmethod</span>
+        <span class="k">def</span> <span class="nf">vertical_dot_plot</span><span class="p">(</span><span class="n">categories</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span> <span class="o">**</span><span class="n">optional_params</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">"""</span>
+<span class="sd">                Creates a vertical dot and whisker plot.</span>
+
+<span class="sd">                :param categories: Categories to place along the x-axis.</span>
+<span class="sd">                :param data: The data for each category.</span>
+<span class="sd">                :param optional_params:</span>
+<span class="sd">                    * colors: A list of colors for each category. Defaults to a DefaultColors.primary_line if not specified.</span>
+<span class="sd">                    * xlabel: Label for the x-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * ylabel: Label for the y-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * title: Title of the plot. Defaults to empty strin if not specified.</span>
+<span class="sd">                    * theme: Theme for the plot. Defaults to 'plotly' if not specified.</span>
+<span class="sd">                :return: A plotly figure object</span>
+<span class="sd">                </span>
+<span class="sd">                :example:</span>
+<span class="sd">                </span>
+<span class="sd">                    &gt;&gt;&gt; from plotting import *</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager = DashManager()</span>
+<span class="sd">                    &gt;&gt;&gt; plot_generator = PlotGenerator.Rank</span>
+<span class="sd">                    &gt;&gt;&gt; categories = ['Category A', 'Category B', 'Category C']</span>
+<span class="sd">                    &gt;&gt;&gt; data = [\</span>
+<span class="sd">                        [10, 12, 14, 13, 12, 13, 12, 10, 14, 11],  # Data for Category A\</span>
+<span class="sd">                        [15, 14, 16, 15, 15, 15, 15, 25, 17],  # Data for Category B\</span>
+<span class="sd">                        [20, 22, 11, 1, 20, 21, 20, 9, 21, 23]  # Data for Category C\</span>
+<span class="sd">                    ]</span>
+<span class="sd">                    &gt;&gt;&gt; fig = plot_generator.vertical_dot_plot(categories, data, title='My Dot and Whisker Plot',\</span>
+<span class="sd">                                      xlabel='My Categories',\</span>
+<span class="sd">                                      ylabel='Value')</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.add_figure(_fig)</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.run()</span>
+
+<span class="sd">                    .. image::   ../../../assets/plot_vertical_dot.png</span>
+<span class="sd">            </span>
+<span class="sd">            """</span>
+            
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">),</span> <span class="s2">"Length of data and categories should be equal; found {len(data)} and {len(categories)}"</span>
+            <span class="c1"># Initialize a figure</span>
+            <span class="n">_fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+            <span class="c1"># Determine colors for each category if provided, otherwise default to a single color</span>
+            <span class="n">colors</span> <span class="o">=</span> <span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'colors'</span><span class="p">,</span> <span class="p">[</span><span class="n">DefaultColors</span><span class="o">.</span><span class="n">primary_line</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">))</span>
+
+            <span class="c1"># Add whiskers and median dots</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">vals</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">data</span><span class="p">)):</span>
+                <span class="c1"># Calculate the median and the whisker values (min, max)</span>
+                <span class="n">median_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
+                <span class="n">whisker_min</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vals</span><span class="p">),</span> <span class="n">scale</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">sem</span><span class="p">(</span><span class="n">vals</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">whisker_max</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vals</span><span class="p">),</span> <span class="n">scale</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">sem</span><span class="p">(</span><span class="n">vals</span><span class="p">))[</span><span class="mi">1</span><span class="p">]</span>
+
+                <span class="c1"># Add median dots</span>
+                <span class="n">_fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                    <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">),</span>
+                    <span class="n">y</span><span class="o">=</span><span class="n">vals</span><span class="p">,</span>
+                    <span class="n">mode</span><span class="o">=</span><span class="s1">'markers'</span><span class="p">,</span>
+                    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+                        <span class="n">color</span><span class="o">=</span><span class="n">DefaultColors</span><span class="o">.</span><span class="n">background_dots</span><span class="p">,</span>
+                        <span class="n">size</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'dot_size'</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                        <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span>
+                    <span class="p">),</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">category</span><span class="p">,</span>
+                    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span>
+                <span class="p">))</span>
+
+                <span class="n">_fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                    <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                    <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">vals</span><span class="p">)],</span>
+                    <span class="n">mode</span><span class="o">=</span><span class="s1">'markers'</span><span class="p">,</span>
+                    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+                        <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)],</span>
+                        <span class="n">size</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'dot_size'</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span>
+                        <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span>
+                    <span class="p">),</span>
+                    <span class="n">name</span><span class="o">=</span><span class="s2">"median"</span><span class="p">,</span>
+                    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span>
+                <span class="p">))</span>
+
+                <span class="c1"># Add the whiskers as lines</span>
+                <span class="n">_fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                    <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">],</span>
+                    <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">whisker_min</span><span class="p">,</span> <span class="n">whisker_max</span><span class="p">],</span>
+                    <span class="n">mode</span><span class="o">=</span><span class="s1">'lines'</span><span class="p">,</span>
+                    <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)],</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="p">),</span>
+                    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span>
+                <span class="p">))</span>
+
+                <span class="c1"># Add whisker caps</span>
+                <span class="n">cap_width</span> <span class="o">=</span> <span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'cap_width'</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+                <span class="n">_fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                    <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">cap_width</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="n">cap_width</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">cap_width</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="n">cap_width</span><span class="p">],</span>
+                    <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">whisker_min</span><span class="p">,</span> <span class="n">whisker_min</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">whisker_max</span><span class="p">,</span> <span class="n">whisker_max</span><span class="p">],</span>
+                    <span class="n">mode</span><span class="o">=</span><span class="s1">'lines'</span><span class="p">,</span>
+                    <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">DefaultColors</span><span class="o">.</span><span class="n">primary_line</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="p">),</span>
+                    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span>
+                <span class="p">))</span>
+
+            <span class="c1"># Update layout</span>
+            <span class="n">_fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+                <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+                    <span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'xlabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                    <span class="n">tickmode</span><span class="o">=</span><span class="s1">'array'</span><span class="p">,</span>
+                    <span class="n">tickvals</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">))),</span>
+                    <span class="n">ticktext</span><span class="o">=</span><span class="n">categories</span>
+                <span class="p">),</span>
+                <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'ylabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)),</span>
+                <span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">template</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'theme'</span><span class="p">,</span> <span class="s1">'plotly'</span><span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">_fig</span></div>
+
+
+<div class="viewcode-block" id="PlotGenerator.Rank.horizontal_dot_plot">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator.Rank.horizontal_dot_plot">[docs]</a>
+        <span class="nd">@staticmethod</span>
+        <span class="k">def</span> <span class="nf">horizontal_dot_plot</span><span class="p">(</span><span class="n">categories</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">],</span> <span class="o">**</span><span class="n">optional_params</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">"""</span>
+<span class="sd">                Creates a horizontal dot and whisker plot.</span>
+
+<span class="sd">                :param categories: Categories to place along the x-axis</span>
+<span class="sd">                :param data: The data for each category.</span>
+<span class="sd">                :param optional_params:</span>
+<span class="sd">                    * colors: A list of colors for each category. Defaults to a primary color line if not specified.</span>
+<span class="sd">                    * xlabel: Label for the x-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * ylabel: Label for the y-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * title: Title of the plot. Defaults to empty strin if not specified.</span>
+<span class="sd">                    * theme: Theme for the plot. Defaults to 'plotly' if not specified.</span>
+<span class="sd">                :return: A plotly figure object</span>
+
+<span class="sd">                :example:</span>
+<span class="sd">                </span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager = DashManager()</span>
+<span class="sd">                    &gt;&gt;&gt; plot_generator = PlotGenerator.Rank()</span>
+<span class="sd">                    &gt;&gt;&gt; categories = ['Category A', 'Category B', 'Category C']</span>
+<span class="sd">                    &gt;&gt;&gt; data = [\</span>
+<span class="sd">                        [10, 12, 14, 13, 12, 13, 12, 10, 14, 11],  # Data for Category A\</span>
+<span class="sd">                        [15, 14, 16, 15, 15, 15, 15, 25, 17],  # Data for Category B\</span>
+<span class="sd">                        [20, 22, 11, 1, 20, 21, 20, 9, 21, 23]  # Data for Category C\</span>
+<span class="sd">                    ]</span>
+<span class="sd">                    &gt;&gt;&gt; fig = plot_generator.horizontal_dot_plot(categories, data, title='My Dot and Whisker Plot',\</span>
+<span class="sd">                                    xlabel='My Categories',\</span>
+<span class="sd">                                    ylabel='Value')</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.add_figure(_fig)</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.run()</span>
+
+<span class="sd">                    .. image::   ../../../assets/plot_horizontal_dot.png</span>
+<span class="sd">                    </span>
+<span class="sd">            """</span>
+            
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="p">(</span><span class="sa">f</span><span class="s2">"Length of data and categories should be equal; found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2"> "</span>
+                                                  <span class="sa">f</span><span class="s2">"and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+            <span class="c1"># Initialize a figure</span>
+            <span class="n">_fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+            <span class="c1"># Determine colors for each category if provided, otherwise default to a single color</span>
+            <span class="n">colors</span> <span class="o">=</span> <span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'colors'</span><span class="p">,</span> <span class="p">[</span><span class="n">DefaultColors</span><span class="o">.</span><span class="n">primary_line</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">))</span>
+
+            <span class="c1"># Add whiskers and median dots for each category</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">vals</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">data</span><span class="p">)):</span>
+                <span class="c1"># Calculate the median and the confidence interval</span>
+                <span class="n">median_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
+                <span class="n">conf_int</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vals</span><span class="p">),</span> <span class="n">scale</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">sem</span><span class="p">(</span><span class="n">vals</span><span class="p">))</span>
+
+                <span class="c1"># Color for the current category</span>
+                <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)]</span>
+
+                <span class="n">_fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                    <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">),</span>
+                    <span class="n">x</span><span class="o">=</span><span class="n">vals</span><span class="p">,</span>
+                    <span class="n">mode</span><span class="o">=</span><span class="s1">'markers'</span><span class="p">,</span>
+                    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+                        <span class="n">color</span><span class="o">=</span><span class="n">DefaultColors</span><span class="o">.</span><span class="n">background_dots</span><span class="p">,</span>
+                        <span class="n">size</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'dot_size'</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                        <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span>
+                    <span class="p">),</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">category</span><span class="p">,</span>
+                    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span>
+                <span class="p">))</span>
+
+                <span class="c1"># Add whiskers as lines</span>
+                <span class="n">_fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                    <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">],</span>
+                    <span class="n">x</span><span class="o">=</span><span class="n">conf_int</span><span class="p">,</span>
+                    <span class="n">mode</span><span class="o">=</span><span class="s1">'lines'</span><span class="p">,</span>
+                    <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
+                    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span>
+                <span class="p">))</span>
+
+                <span class="c1"># Add whisker caps</span>
+                <span class="n">cap_size</span> <span class="o">=</span> <span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'cap_size'</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
+                <span class="n">_fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                    <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">cap_size</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="n">cap_size</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">cap_size</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="n">cap_size</span><span class="p">],</span>
+                    <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="n">conf_int</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">conf_int</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="kc">None</span><span class="p">,</span> <span class="n">conf_int</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">conf_int</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span>
+                    <span class="n">mode</span><span class="o">=</span><span class="s1">'lines'</span><span class="p">,</span>
+                    <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
+                    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span>
+                <span class="p">))</span>
+
+                <span class="c1"># Add median dots</span>
+                <span class="n">_fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                    <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                    <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="n">median_value</span><span class="p">],</span>
+                    <span class="n">mode</span><span class="o">=</span><span class="s1">'markers'</span><span class="p">,</span>
+                    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">),</span>
+                    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span>
+                <span class="p">))</span>
+
+            <span class="c1"># Update layout</span>
+            <span class="n">_fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+                <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+                    <span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'ylabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                    <span class="n">tickmode</span><span class="o">=</span><span class="s1">'array'</span><span class="p">,</span>
+                    <span class="n">tickvals</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">))),</span>
+                    <span class="n">ticktext</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span>
+                    <span class="n">automargin</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="p">),</span>
+                <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+                    <span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'xlabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+                <span class="p">),</span>
+                <span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">template</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'theme'</span><span class="p">,</span> <span class="s1">'plotly'</span><span class="p">),</span>
+                <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span>
+            <span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">_fig</span></div>
+
+
+<div class="viewcode-block" id="PlotGenerator.Rank.horizontal_waterfall">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator.Rank.horizontal_waterfall">[docs]</a>
+        <span class="nd">@staticmethod</span>
+        <span class="k">def</span> <span class="nf">horizontal_waterfall</span><span class="p">(</span><span class="n">categories</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="o">**</span><span class="n">optional_params</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">"""</span>
+<span class="sd">                Creates a horizontal waterfall chart.</span>
+
+<span class="sd">                :param categories: Categories to be place along the y axis</span>
+<span class="sd">                :param data: Data for each category</span>
+<span class="sd">                :param optional_params:</span>
+<span class="sd">                    * baseline: A baseline about which to flip the columns. Defaults to 0</span>
+<span class="sd">                    * xlabel: Label for the x-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * ylabel: Label for the y-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * title: Title of the plot. Defaults to empty strin if not specified.</span>
+<span class="sd">                    * theme: Theme for the plot. Defaults to 'plotly' if not specified.</span>
+<span class="sd">                :return: A plotly figure object</span>
+
+<span class="sd">                :example:</span>
+<span class="sd">                </span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager = DashManager()</span>
+<span class="sd">                    &gt;&gt;&gt; plot_generator = PlotGenerator.Rank()</span>
+<span class="sd">                    &gt;&gt;&gt; categories = ['Burger', 'Pizza', 'Sandwich', 'Pasta', 'Momos', 'Garlic']</span>
+<span class="sd">                    &gt;&gt;&gt; data = [-10, -5, -4, 4, 5, 10]</span>
+<span class="sd">                    &gt;&gt;&gt; fig = plot_generator.horizontal_waterfall(categories, values, \</span>
+<span class="sd">                                            xlabel='Value', ylabel='Categories',\</span>
+<span class="sd">                                            title='Horizontal Waterfall')</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.add_figure(fig)</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.run()</span>
+
+<span class="sd">                .. image::   ../../../assets/plot_horizontal_waterfall.png</span>
+<span class="sd">                </span>
+<span class="sd">            """</span>
+            
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="p">(</span><span class="sa">f</span><span class="s2">"Length of data and categories should be equal; found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2"> "</span>
+                                                  <span class="sa">f</span><span class="s2">"and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+            <span class="c1"># Set baseline value</span>
+            <span class="n">_baseline</span> <span class="o">=</span> <span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'baseline'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+            <span class="c1"># Combine categories and data</span>
+            <span class="n">pairs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'sorted'</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+                <span class="n">pairs</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pairs</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+            <span class="c1"># Create a Plotly figure</span>
+            <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+            <span class="c1"># Plot the bars</span>
+            <span class="k">for</span> <span class="n">category</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">pairs</span><span class="p">:</span>
+                <span class="c1"># Determine the starting point and length of each bar</span>
+                <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">_baseline</span><span class="p">:</span>
+                    <span class="n">base</span> <span class="o">=</span> <span class="n">_baseline</span>
+                    <span class="n">length</span> <span class="o">=</span> <span class="n">value</span> <span class="o">-</span> <span class="n">_baseline</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">base</span> <span class="o">=</span> <span class="n">value</span>
+                    <span class="n">length</span> <span class="o">=</span> <span class="n">_baseline</span> <span class="o">-</span> <span class="n">value</span>
+
+                <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+                    <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">category</span><span class="p">],</span>
+                    <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="n">length</span><span class="p">],</span>
+                    <span class="n">base</span><span class="o">=</span><span class="n">base</span><span class="p">,</span>
+                    <span class="n">orientation</span><span class="o">=</span><span class="s1">'h'</span><span class="p">,</span>
+                    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">DefaultColors</span><span class="o">.</span><span class="n">secondary_line</span> <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="n">_baseline</span> <span class="k">else</span> <span class="n">DefaultColors</span><span class="o">.</span><span class="n">primary_line</span><span class="p">)</span>
+                <span class="p">))</span>
+
+            <span class="c1"># Set the layout for the figure</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+                <span class="n">xaxis_title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'xlabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">yaxis_title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'ylabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span>
+            <span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">fig</span></div>
+</div>
+
+
+<div class="viewcode-block" id="PlotGenerator.Deviation">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator.Deviation">[docs]</a>
+    <span class="k">class</span> <span class="nc">Deviation</span><span class="p">:</span>
+<div class="viewcode-block" id="PlotGenerator.Deviation.baseline_lineplot">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator.Deviation.baseline_lineplot">[docs]</a>
+        <span class="nd">@staticmethod</span>
+        <span class="k">def</span> <span class="nf">baseline_lineplot</span><span class="p">(</span><span class="n">baseline_series</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">categories</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="o">**</span><span class="n">optional_params</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">"""</span>
+<span class="sd">                Creates a baseine line plot.</span>
+
+<span class="sd">                :param baseline_series: The base line series</span>
+<span class="sd">                :param data: The other series to compare to the baseline</span>
+<span class="sd">                :param categories: The categories for each series</span>
+<span class="sd">                :param optional_params:</span>
+<span class="sd">                    * colors: A list of colors for each category. Defaults to Pastel1 colormap if not specified.</span>
+<span class="sd">                    * xlabel: Label for the x-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * ylabel: Label for the y-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * title: Title of the plot. Defaults to empty strin if not specified.</span>
+<span class="sd">                    * theme: Theme for the plot. Defaults to 'plotly' if not specified.</span>
+<span class="sd">                    * legend: Title of legend. Defaults to empty string.</span>
+<span class="sd">                :return: A plotly figure object</span>
+
+<span class="sd">                :example:</span>
+<span class="sd">                </span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager = DashManager()</span>
+<span class="sd">                    &gt;&gt;&gt; plot_generator = PlotGenerator.Deviation()</span>
+<span class="sd">                    &gt;&gt;&gt; baseline = [10, 20, 30]</span>
+<span class="sd">                    &gt;&gt;&gt; months = ['Jan', 'Feb', 'Mar']</span>
+<span class="sd">                    &gt;&gt;&gt; series_colors = ['red', 'green', 'blue']</span>
+<span class="sd">                    &gt;&gt;&gt; series1 = [12, 22, 32]</span>
+<span class="sd">                    &gt;&gt;&gt; series2 = [8, 18, 28]</span>
+<span class="sd">                    &gt;&gt;&gt; series3 = [15, 25, 35]</span>
+<span class="sd">                    &gt;&gt;&gt; data = [series1, series2, series3]</span>
+<span class="sd">                    &gt;&gt;&gt; fig = plot_generator.baseline_lineplot(baseline, data, months,  title='Sales Data', xlabel='Month', ylabel='Sales ($)', legend='Product')</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.add_figure(_fig)</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.run()</span>
+
+<span class="sd">                .. image::   ../../../assets/plot_baseline.png</span>
+<span class="sd">                </span>
+<span class="sd">            """</span>
+            
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> \
+                <span class="p">(</span><span class="sa">f</span><span class="s2">"Length of data and categories should be equal; found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+            <span class="n">colors</span> <span class="o">=</span> <span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'colors'</span><span class="p">,</span> <span class="n">gen_hex_from_cm</span><span class="p">(</span><span class="s1">'Pastel1'</span><span class="p">))</span>
+
+            <span class="c1"># Create a Plotly figure</span>
+            <span class="n">_fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+            <span class="c1"># Add each series as a separate line trace</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">series</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+                <span class="n">percentage_change_series</span> <span class="o">=</span> <span class="p">[(</span><span class="n">value</span> <span class="o">-</span> <span class="n">baseline_series</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">/</span> <span class="n">baseline_series</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span> <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span>
+                                            <span class="nb">enumerate</span><span class="p">(</span><span class="n">series</span><span class="p">)]</span>
+                <span class="n">_fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                    <span class="n">x</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span>
+                    <span class="n">y</span><span class="o">=</span><span class="n">percentage_change_series</span><span class="p">,</span>
+                    <span class="n">mode</span><span class="o">=</span><span class="s1">'lines+markers'</span><span class="p">,</span>
+                    <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s1">'Product </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">'</span><span class="p">,</span>
+                    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)])</span>
+                <span class="p">))</span>
+
+            <span class="c1"># Add a horizontal line at y=0 for the baseline</span>
+            <span class="n">_fig</span><span class="o">.</span><span class="n">add_hline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">DefaultColors</span><span class="o">.</span><span class="n">baseline</span><span class="p">,</span> <span class="n">dash</span><span class="o">=</span><span class="s1">'dash'</span><span class="p">))</span>
+
+            <span class="c1"># Update layout based on optional parameters</span>
+            <span class="n">_fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+                <span class="n">xaxis_title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'xlabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">yaxis_title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'ylabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">legend_title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'legend'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">template</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'theme'</span><span class="p">,</span> <span class="s1">'plotly'</span><span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">_fig</span></div>
+
+
+<div class="viewcode-block" id="PlotGenerator.Deviation.vertical_waterfall">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator.Deviation.vertical_waterfall">[docs]</a>
+        <span class="nd">@staticmethod</span>
+        <span class="k">def</span> <span class="nf">vertical_waterfall</span><span class="p">(</span><span class="n">categories</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="o">**</span><span class="n">optional_params</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">"""</span>
+<span class="sd">                .. _vertical_waterfall:</span>
+<span class="sd">            </span>
+<span class="sd">                Creates a vertical waterfall.</span>
+
+<span class="sd">                :param categories: Categories to be place along the y axis.</span>
+<span class="sd">                :param data: Data for each category.</span>
+<span class="sd">                :param optional_params:</span>
+<span class="sd">                    * baseline: A baseline about which to flip the columns. Defaults to 0.</span>
+<span class="sd">                    * xlabel: Label for the x-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * ylabel: Label for the y-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * title: Title of the plot. Defaults to empty strin if not specified.</span>
+<span class="sd">                    * theme: Theme for the plot. Defaults to 'plotly' if not specified.</span>
+<span class="sd">                :return: A plotly figure object</span>
+
+<span class="sd">                :example:</span>
+<span class="sd">                </span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager = DashManager()</span>
+<span class="sd">                    &gt;&gt;&gt; plot_generator = PlotGenerator.Deviation()</span>
+<span class="sd">                    &gt;&gt;&gt; categories = ['W1', 'W3', 'W5', 'W7', 'W9', 'W10']</span>
+<span class="sd">                    &gt;&gt;&gt; data =  [-4, -5, -10, 10, 5, 4]</span>
+<span class="sd">                    &gt;&gt;&gt; fig = plot_generator.vertical_waterfall(categories, values, \</span>
+<span class="sd">                                            xlabel='Categories', ylabel='Value', title='Vertical Waterfall')</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.add_figure(fig)</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.run()</span>
+
+<span class="sd">                .. image::   ../../../assets/plot_vertical_waterfall.png</span>
+<span class="sd">                </span>
+<span class="sd">            """</span>
+            
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> \
+                <span class="sa">f</span><span class="s2">"Length of data and categories should be equal; found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+
+            <span class="c1"># Set baseline value</span>
+            <span class="n">baseline</span> <span class="o">=</span> <span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'baseline'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+            <span class="c1"># Combine categories and data</span>
+            <span class="n">pairs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'sorted'</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+                <span class="n">pairs</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pairs</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+            <span class="c1"># Create a Plotly figure</span>
+            <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+            <span class="c1"># Plot the bars</span>
+            <span class="k">for</span> <span class="n">category</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">pairs</span><span class="p">:</span>
+                <span class="c1"># Determine the starting point and length of each bar</span>
+                <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">baseline</span><span class="p">:</span>
+                    <span class="n">base</span> <span class="o">=</span> <span class="n">baseline</span>
+                    <span class="n">length</span> <span class="o">=</span> <span class="n">value</span> <span class="o">-</span> <span class="n">baseline</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">base</span> <span class="o">=</span> <span class="n">value</span>
+                    <span class="n">length</span> <span class="o">=</span> <span class="n">baseline</span> <span class="o">-</span> <span class="n">value</span>
+
+                <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+                    <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="n">category</span><span class="p">],</span>
+                    <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">length</span><span class="p">],</span>
+                    <span class="n">base</span><span class="o">=</span><span class="n">base</span><span class="p">,</span>
+                    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">DefaultColors</span><span class="o">.</span><span class="n">secondary_line</span> <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="n">baseline</span> <span class="k">else</span> <span class="n">DefaultColors</span><span class="o">.</span><span class="n">primary_line</span><span class="p">)</span>
+                <span class="p">))</span>
+
+            <span class="c1"># Update layout based on optional parameters</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+                <span class="n">xaxis_title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'xlabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">yaxis_title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'ylabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">template</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'theme'</span><span class="p">,</span> <span class="s1">'plotly'</span><span class="p">),</span>
+                <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span>
+            <span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">fig</span></div>
+</div>
+
+
+<div class="viewcode-block" id="PlotGenerator.Correlation">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator.Correlation">[docs]</a>
+    <span class="k">class</span> <span class="nc">Correlation</span><span class="p">:</span>
+<div class="viewcode-block" id="PlotGenerator.Correlation.heatmap">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator.Correlation.heatmap">[docs]</a>
+        <span class="nd">@staticmethod</span>
+        <span class="k">def</span> <span class="nf">heatmap</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">],</span> <span class="n">y_axis_categories</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">x_axis_categories</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">colorscale</span><span class="p">:</span> <span class="n">List</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">'RdPu'</span><span class="p">,</span>
+                    <span class="o">**</span><span class="n">optional_params</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">"""</span>
+<span class="sd">                Creates a heatmap.</span>
+
+<span class="sd">                :param data: 2D data for the heatmap.</span>
+<span class="sd">                :param y_axis_categories: The labels to show along vertical axis.</span>
+<span class="sd">                :param x_axis_categories: The labels to show along horizontal axis.</span>
+<span class="sd">                :param colorscale: A list of colors or a string for a matplotlib colormap. Defaults to RdPu.</span>
+<span class="sd">                :param optional_params:</span>
+<span class="sd">                    * xlabel: Label for the x-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * ylabel: Label for the y-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * title: Title of the plot. Defaults to empty strin if not specified.</span>
+<span class="sd">                    * theme: Theme for the plot. Defaults to 'plotly' if not specified.</span>
+<span class="sd">                </span>
+<span class="sd">                :return: A plotly figure object</span>
+
+<span class="sd">                :example:</span>
+<span class="sd">                </span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager = DashManager()</span>
+<span class="sd">                    &gt;&gt;&gt; months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']</span>
+<span class="sd">                    &gt;&gt;&gt; years = [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2017, 2019, 2021, 2023]</span>
+<span class="sd">                    &gt;&gt;&gt; colorscale = ["#1D2026", "#393939", "#666666", "#BDBDBD", "#E0E0E0", "#F2F2F2", "#FD93B1", "#FC2964", \</span>
+<span class="sd">                    "#FEC9D8", "#FD5F8B", "#0095FF", "#E6F5FF", "#5C33F6", "#8566F8"]</span>
+<span class="sd">                    &gt;&gt;&gt; correlation = PlotGenerator.Correlation()</span>
+<span class="sd">                    &gt;&gt;&gt; data = np.random.rand(len(y_axis_data), len(x_axis_data))</span>
+<span class="sd">                    &gt;&gt;&gt; fig = correlation.heatmap(data, months, years, colorscale, \</span>
+<span class="sd">                    xlabel='Year', ylabel='Month', title='Monthly Data Heatmap')</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.add_figure(fig)</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.run()</span>
+
+<span class="sd">                .. image::   ../../../assets/plot_heatmap.png</span>
+<span class="sd">                </span>
+<span class="sd">            """</span>
+            
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_axis_categories</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> \
+                <span class="sa">f</span><span class="s2">"Length of data and categories should be equal; found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">y_axis_categories</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+
+            <span class="c1"># Create a Plotly figure with a Heatmap trace</span>
+            <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">go</span><span class="o">.</span><span class="n">Heatmap</span><span class="p">(</span>
+                <span class="n">z</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+                <span class="n">y</span><span class="o">=</span><span class="n">y_axis_categories</span><span class="p">,</span>
+                <span class="n">x</span><span class="o">=</span><span class="n">x_axis_categories</span><span class="p">,</span>
+                <span class="n">colorscale</span><span class="o">=</span><span class="n">colorscale</span><span class="p">,</span>
+            <span class="p">))</span>
+
+            <span class="c1"># Update layout based on optional parameters</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+                <span class="n">xaxis_title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'xlabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">yaxis_title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'ylabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">template</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'theme'</span><span class="p">,</span> <span class="s1">'plotly'</span><span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">fig</span></div>
+
+
+<div class="viewcode-block" id="PlotGenerator.Correlation.scatter_plot">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator.Correlation.scatter_plot">[docs]</a>
+        <span class="nd">@staticmethod</span>
+        <span class="k">def</span> <span class="nf">scatter_plot</span><span class="p">(</span><span class="n">marker_shapes</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">x_axis_data</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">],</span> <span class="n">y_axis_data</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">],</span>
+                         <span class="o">**</span><span class="n">optional_params</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">"""</span>
+<span class="sd">                Creates a scatter plot.</span>
+
+<span class="sd">                :param marker_shapes: Marker shape of each series</span>
+<span class="sd">                :param x_axis_data: The x axis value of each point of each series</span>
+<span class="sd">                :param y_axis_data: The y axis value of each point of each series</span>
+<span class="sd">                :param optional_params:</span>
+<span class="sd">                    * xlabel: Label for the x-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * ylabel: Label for the y-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * title: Title of the plot. Defaults to empty strin if not specified.</span>
+<span class="sd">                    * theme: Theme for the plot. Defaults to 'plotly' if not specified.</span>
+<span class="sd">                :return: A plotly Figure object</span>
+
+<span class="sd">                :example:</span>
+<span class="sd">                </span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager = DashManager()</span>
+<span class="sd">                    &gt;&gt;&gt; marker_shapes = ['square', 'circle', 'diamond']  # Plotly symbol names</span>
+<span class="sd">                    &gt;&gt;&gt; x_values = [list(range(10)), list(range(10)), list(range(10))]  # Example x-axis values for each group</span>
+<span class="sd">                    &gt;&gt;&gt; series_data = [\</span>
+<span class="sd">                            [i ** 1.3 + np.random.rand() * 30.0 for i in range(10)],\</span>
+<span class="sd">                            [i ** 1.5 + np.random.rand() * 40.0 for i in range(10)],\</span>
+<span class="sd">                            [i ** 1.2 + np.random.rand() * 20.0 for i in range(10)]\</span>
+<span class="sd">                        ]</span>
+<span class="sd">                    &gt;&gt;&gt; colors = ["#FC2964", "#0095FF", "#5C33F6"]</span>
+<span class="sd">                    &gt;&gt;&gt; correlation = PlotGenerator.Correlation()</span>
+<span class="sd">                    &gt;&gt;&gt; data = np.random.rand(len(y_axis_data), len(x_axis_data))</span>
+<span class="sd">                    &gt;&gt;&gt; fig = correlation.scatter_plot(marker_shapes, x_values, series_data, colors, \</span>
+<span class="sd">                    title='Scatter Plot', xlabel='X-Axis', ylabel='Y-Axis')</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.add_figure(fig)</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.run()</span>
+
+<span class="sd">                .. image::   ../../../assets/plot_scatter.png</span>
+<span class="sd">            </span>
+<span class="sd">            """</span>
+            
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_axis_data</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_axis_data</span><span class="p">),</span> \
+                <span class="sa">f</span><span class="s2">"Length of data and categories should be equal; found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x_axis_data</span><span class="p">)</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">y_axis_data</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_axis_data</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">marker_shapes</span><span class="p">),</span> \
+                <span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">"Length of marker shapes and categories should be equal;found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x_axis_data</span><span class="p">)</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">marker_shapes</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+            <span class="n">colors</span> <span class="o">=</span> <span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'colors'</span><span class="p">,</span> <span class="n">gen_hex_from_cm</span><span class="p">(</span><span class="s1">'Pastel1'</span><span class="p">))</span>
+
+            <span class="c1"># Initialize an empty list for the Plotly traces</span>
+            <span class="n">traces</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="c1"># Generate the scatter plot for each series</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">shape</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x_axis_data</span><span class="p">,</span> <span class="n">y_axis_data</span><span class="p">,</span> <span class="n">marker_shapes</span><span class="p">)):</span>
+                <span class="n">traces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                    <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span>
+                    <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span>
+                    <span class="n">mode</span><span class="o">=</span><span class="s1">'markers'</span><span class="p">,</span>
+                    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+                        <span class="n">symbol</span><span class="o">=</span><span class="n">shape</span><span class="p">,</span>
+                        <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>  <span class="c1"># Or any other size logic</span>
+                        <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)],</span>
+                        <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'DarkSlateGrey'</span><span class="p">)</span>
+                    <span class="p">),</span>
+                    <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">"Group </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">"</span>
+                <span class="p">))</span>
+
+            <span class="c1"># Create the layout</span>
+            <span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+                <span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'xlabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)),</span>
+                <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'ylabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)),</span>
+                <span class="n">template</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'theme'</span><span class="p">,</span> <span class="s1">'plotly'</span><span class="p">),</span>
+                <span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">yanchor</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span> <span class="n">xanchor</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="c1"># Create the figure with all traces and the specified layout</span>
+            <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">traces</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">fig</span></div>
+</div>
+
+
+<div class="viewcode-block" id="PlotGenerator.Timeseries">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator.Timeseries">[docs]</a>
+    <span class="k">class</span> <span class="nc">Timeseries</span><span class="p">:</span>
+<div class="viewcode-block" id="PlotGenerator.Timeseries.line_plot">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator.Timeseries.line_plot">[docs]</a>
+        <span class="nd">@staticmethod</span>
+        <span class="k">def</span> <span class="nf">line_plot</span><span class="p">(</span><span class="n">input_vals</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">predicted_line</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">actual_line</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="o">**</span><span class="n">optional_params</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">"""</span>
+<span class="sd">                Creates a line plot.</span>
+
+<span class="sd">                :param input_vals: The values of the inputs</span>
+<span class="sd">                :param predicted_line: The predicted line</span>
+<span class="sd">                :param actual_line: The actual line</span>
+<span class="sd">                :param optional_params:</span>
+<span class="sd">                    * xlabel: Label for the x-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * ylabel: Label for the y-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * title: Title of the plot. Defaults to empty strin if not specified.</span>
+<span class="sd">                    * theme: Theme for the plot. Defaults to 'plotly' if not specified.</span>
+<span class="sd">                :return: A plotly go Figure</span>
+
+<span class="sd">                :example:</span>
+<span class="sd">                </span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager = DashManager()</span>
+<span class="sd">                    &gt;&gt;&gt; x = ['8:00 PM', '9:00 PM', '10:00 PM', '12:00 PM', '1:00 AM', '3:00 AM', '4:00 AM', '5:00 AM']</span>
+<span class="sd">                    &gt;&gt;&gt; yp = [30, 30, 33, 28, 34, 29, 33, 32]</span>
+<span class="sd">                    &gt;&gt;&gt; y = [30, 30, 29, 33, 32, 29, 31, 37]</span>
+<span class="sd">                    &gt;&gt;&gt; timeseries = PlotGenerator.Timeseries()</span>
+<span class="sd">                    &gt;&gt;&gt; fig = timeseries.line_plot(x, yp, y, title='Line Chart', xlabel='Time', \</span>
+<span class="sd">                    ylabel='Value')</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.add_figure(fig)</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.run()</span>
+
+<span class="sd">                    .. image::   ../../../assets/plot_baseline.png</span>
+<span class="sd">                </span>
+<span class="sd">            """</span>
+            
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_vals</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">predicted_line</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_vals</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">actual_line</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"xAxisvalue, predictedLine, and actualLine must have the same length."</span><span class="p">)</span>
+
+            <span class="c1"># Create a new figure</span>
+            <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+            <span class="c1"># Add actual line</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                <span class="n">x</span><span class="o">=</span><span class="n">input_vals</span><span class="p">,</span>
+                <span class="n">y</span><span class="o">=</span><span class="n">actual_line</span><span class="p">,</span>
+                <span class="n">mode</span><span class="o">=</span><span class="s1">'lines'</span><span class="p">,</span>
+                <span class="n">name</span><span class="o">=</span><span class="s1">'Actual'</span><span class="p">,</span>
+                <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'actualLineColor'</span><span class="p">,</span> <span class="n">DefaultColors</span><span class="o">.</span><span class="n">primary_line</span><span class="p">),</span>
+                          <span class="n">dash</span><span class="o">=</span><span class="s1">'dash'</span><span class="p">)</span>
+            <span class="p">))</span>
+
+            <span class="c1"># Add predicted line</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                <span class="n">x</span><span class="o">=</span><span class="n">input_vals</span><span class="p">,</span>
+                <span class="n">y</span><span class="o">=</span><span class="n">predicted_line</span><span class="p">,</span>
+                <span class="n">mode</span><span class="o">=</span><span class="s1">'lines'</span><span class="p">,</span>
+                <span class="n">name</span><span class="o">=</span><span class="s1">'Predicted'</span><span class="p">,</span>
+                <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'predictedLineColor'</span><span class="p">,</span> <span class="n">DefaultColors</span><span class="o">.</span><span class="n">secondary_line</span><span class="p">))</span>
+            <span class="p">))</span>
+
+            <span class="c1"># Update layout</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+                <span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'xlabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)),</span>
+                <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'ylabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)),</span>
+                <span class="n">template</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'theme'</span><span class="p">,</span> <span class="s1">'plotly'</span><span class="p">),</span>
+                <span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">yanchor</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span> <span class="n">xanchor</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">fig</span></div>
+
+
+<div class="viewcode-block" id="PlotGenerator.Timeseries.stack_bar">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.PlotGenerator.Timeseries.stack_bar">[docs]</a>
+        <span class="nd">@staticmethod</span>
+        <span class="k">def</span> <span class="nf">stack_bar</span><span class="p">(</span><span class="n">categories</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">series_data</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">],</span> <span class="n">series_names</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span>
+                      <span class="o">**</span><span class="n">optional_params</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">"""</span>
+<span class="sd">                Creates a stacked bar plot.</span>
+
+<span class="sd">                :param categories: The categories for the x-axis</span>
+<span class="sd">                :param series_data: A list of lists containing data for each series</span>
+<span class="sd">                :param series_names: A list of names for each series</span>
+<span class="sd">                :param optional_params:</span>
+<span class="sd">                    * colors: A list of colors for each category. Defaults to Pastel1 colormap if not specified.</span>
+<span class="sd">                    * xlabel: Label for the x-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * ylabel: Label for the y-axis. Defaults to an empty string if not specified.</span>
+<span class="sd">                    * title: Title of the plot. Defaults to empty strin if not specified.</span>
+<span class="sd">                    * theme: Theme for the plot. Defaults to 'plotly' if not specified.</span>
+<span class="sd">                :return: A plotly figure object</span>
+
+<span class="sd">                :example:</span>
+<span class="sd">                </span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager = DashManager()</span>
+<span class="sd">                    &gt;&gt;&gt; timeseries = PlotGenerator.Timeseries()</span>
+<span class="sd">                    &gt;&gt;&gt; categories = ['Category A', 'Category B', 'Category C', 'Category D']</span>
+<span class="sd">                    &gt;&gt;&gt; series_data = [\</span>
+<span class="sd">                        [20, 15, 25, 10],\</span>
+<span class="sd">                        [30, 25, 15, 20],\</span>
+<span class="sd">                        [10, 20, 30, 25]\</span>
+<span class="sd">                    ]</span>
+<span class="sd">                    &gt;&gt;&gt; series_names = ['Series 1', 'Series 2', 'Series 3']</span>
+<span class="sd">                    &gt;&gt;&gt; # Optional parameters</span>
+<span class="sd">                    &gt;&gt;&gt; optional_params = {\</span>
+<span class="sd">                        'title': 'Stacked Bar Chart Example',\</span>
+<span class="sd">                        'xlabel': 'Categories',\</span>
+<span class="sd">                        'ylabel': 'Value',\</span>
+<span class="sd">                        'theme': 'plotly',\</span>
+<span class="sd">                    }</span>
+<span class="sd">                    &gt;&gt;&gt; colors = ['red', 'green', 'blue']</span>
+<span class="sd">                    &gt;&gt;&gt; # Create the stacked bar chart</span>
+<span class="sd">                    &gt;&gt;&gt; fig = timeseries.stack_bar(categories, series_data, series_names, colors, **optional_params)</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.add_figure(fig)</span>
+<span class="sd">                    &gt;&gt;&gt; dash_manager.run()</span>
+
+<span class="sd">                .. image::   ../../../assets/plot_stack_bar.png</span>
+<span class="sd">                </span>
+<span class="sd">            """</span>
+            
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">series_data</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">series_names</span><span class="p">),</span> \
+                <span class="sa">f</span><span class="s2">"Length of data and categories should be equal; found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">series_data</span><span class="p">)</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">series_names</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">)</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">series_data</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Not all lists have same length of categories </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">)</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+
+            <span class="n">colors</span> <span class="o">=</span> <span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'colors'</span><span class="p">,</span> <span class="n">gen_hex_from_cm</span><span class="p">(</span><span class="s1">'Pastel1'</span><span class="p">))</span>
+
+            <span class="c1"># Create a new figure</span>
+            <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">series_data</span><span class="p">):</span>
+                <span class="c1"># Add bars for each series</span>
+                <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+                    <span class="n">x</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span>
+                    <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">series_names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                    <span class="n">marker_color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)]</span>
+                <span class="p">))</span>
+
+            <span class="c1"># Update layout to stack the bars</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+                <span class="n">barmode</span><span class="o">=</span><span class="s1">'stack'</span><span class="p">,</span>
+                <span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">''</span><span class="p">),</span>
+                <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'xlabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)),</span>
+                <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'ylabel'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)),</span>
+                <span class="n">template</span><span class="o">=</span><span class="n">optional_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'theme'</span><span class="p">,</span> <span class="s1">'plotly'</span><span class="p">),</span>
+                <span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">yanchor</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span> <span class="n">xanchor</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">fig</span></div>
+</div>
+</div>
+
+
+
+<div class="viewcode-block" id="DashManager">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.DashManager">[docs]</a>
+<span class="k">class</span> <span class="nc">DashManager</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">        A utility class for managing and displaying Plotly Dash figures in a web application.</span>
+
+<span class="sd">        This class simplifies the process of creating and displaying interactive Plotly Dash figures</span>
+<span class="sd">        in a Dash web application. It provides methods for adding figures, setting up the layout,</span>
+<span class="sd">        and running the Dash server.</span>
+
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            dash_manager = DashManager()</span>
+<span class="sd">            fig1 = create_plotly_figure_1()</span>
+<span class="sd">            fig2 = create_plotly_figure_2()</span>
+<span class="sd">            dash_manager.add_figure(fig1)</span>
+<span class="sd">            dash_manager.add_figure(fig2)</span>
+<span class="sd">            dash_manager.run()</span>
+
+<span class="sd">        :ivar app: The Dash application instance.</span>
+<span class="sd">        :vartype app: dash.Dash</span>
+<span class="sd">        :ivar figures: A list of Plotly figures to be displayed in the application.</span>
+<span class="sd">        :vartype figures: list</span>
+<span class="sd">        </span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">            Initialize a DashManager instance.</span>
+
+<span class="sd">            This constructor initializes the DashManager by creating a Dash application instance</span>
+<span class="sd">            and an empty list to store Plotly figures.</span>
+<span class="sd">            </span>
+<span class="sd">        """</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">app</span> <span class="o">=</span> <span class="n">Dash</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">figures</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="DashManager.add_figure">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.DashManager.add_figure">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_figure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">figure</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">            Add a Plotly figure to the list of figures.</span>
+
+<span class="sd">            :param figure: A Plotly figure to be added to the list of figures.</span>
+<span class="sd">            :type figure: plotly.graph_objs.Figure</span>
+<span class="sd">            </span>
+<span class="sd">        """</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">figures</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">figure</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DashManager.setup_layout">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.DashManager.setup_layout">[docs]</a>
+    <span class="k">def</span> <span class="nf">setup_layout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">            Set up the layout of the Dash application.</span>
+
+<span class="sd">            This method configures the layout of the Dash application by creating a Div element</span>
+<span class="sd">            containing dcc.Graph components for each figure added to the list of figures.</span>
+<span class="sd">            </span>
+<span class="sd">        """</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span>
+            <span class="n">dcc</span><span class="o">.</span><span class="n">Graph</span><span class="p">(</span><span class="n">figure</span><span class="o">=</span><span class="n">fig</span><span class="p">)</span> <span class="k">for</span> <span class="n">fig</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">figures</span>
+        <span class="p">])</span></div>
+
+
+<div class="viewcode-block" id="DashManager.run">
+<a class="viewcode-back" href="../References/Mycelium/Plot.html#Plot.DashManager.run">[docs]</a>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">            Start the Dash server to run the application.</span>
+
+<span class="sd">            This method starts the Dash server to run the application with the configured layout.</span>
+<span class="sd">            It also enables debugging mode to aid in development.</span>
+<span class="sd">            </span>
+<span class="sd">        """</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">setup_layout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run_server</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+</div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+    <span class="c1"># Example Usage</span>
+    <span class="n">plot_generator</span> <span class="o">=</span> <span class="n">PlotGenerator</span><span class="o">.</span><span class="n">Rank</span><span class="p">()</span>
+    <span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Category A'</span><span class="p">,</span> <span class="s1">'Category B'</span><span class="p">,</span> <span class="s1">'Category C'</span><span class="p">]</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>  <span class="c1"># Data for Category A</span>
+        <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">17</span><span class="p">],</span>  <span class="c1"># Data for Category B</span>
+        <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">23</span><span class="p">]</span>  <span class="c1"># Data for Category C</span>
+    <span class="p">]</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plot_generator</span><span class="o">.</span><span class="n">horizontal_dot_plot</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'My Dot and Whisker Plot'</span><span class="p">,</span>
+                                             <span class="n">xlabel</span><span class="o">=</span><span class="s1">'My Categories'</span><span class="p">,</span>
+                                             <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Value'</span><span class="p">)</span>
+
+    <span class="n">dash_manager</span> <span class="o">=</span> <span class="n">DashManager</span><span class="p">()</span>
+    <span class="n">dash_manager</span><span class="o">.</span><span class="n">add_figure</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plot_generator</span><span class="o">.</span><span class="n">vertical_dot_plot</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'My Dot and Whisker Plot'</span><span class="p">,</span>
+                                           <span class="n">xlabel</span><span class="o">=</span><span class="s1">'My Categories'</span><span class="p">,</span>
+                                           <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Value'</span><span class="p">)</span>
+    <span class="n">dash_manager</span><span class="o">.</span><span class="n">add_figure</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+    <span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Burger'</span><span class="p">,</span> <span class="s1">'Pizza'</span><span class="p">,</span> <span class="s1">'Sandwich'</span><span class="p">,</span> <span class="s1">'Pasta'</span><span class="p">,</span> <span class="s1">'Momos'</span><span class="p">,</span> <span class="s1">'Garlic'</span><span class="p">]</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+    <span class="n">plot_class</span> <span class="o">=</span> <span class="n">plot_generator</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plot_class</span><span class="o">.</span><span class="n">horizontal_waterfall</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">'Value'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Categories'</span><span class="p">,</span>
+                                          <span class="n">title</span><span class="o">=</span><span class="s1">'Horizontal Waterfall'</span><span class="p">,</span> <span class="n">baseline</span><span class="o">=-</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="n">dash_manager</span><span class="o">.</span><span class="n">add_figure</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+
+    <span class="n">baseline</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+    <span class="n">x_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Jan'</span><span class="p">,</span> <span class="s1">'Feb'</span><span class="p">,</span> <span class="s1">'Mar'</span><span class="p">]</span>
+    <span class="n">series1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
+    <span class="n">series2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">28</span><span class="p">]</span>
+    <span class="n">series3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
+
+    <span class="n">plot_class</span> <span class="o">=</span> <span class="n">PlotGenerator</span><span class="o">.</span><span class="n">Deviation</span><span class="p">()</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plot_class</span><span class="o">.</span><span class="n">baseline_lineplot</span><span class="p">(</span><span class="n">baseline</span><span class="p">,</span> <span class="p">[</span><span class="n">series1</span><span class="p">,</span> <span class="n">series2</span><span class="p">,</span> <span class="n">series3</span><span class="p">],</span> <span class="n">x_labels</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Sales Data'</span><span class="p">,</span>
+                                       <span class="n">xlabel</span><span class="o">=</span><span class="s1">'Month'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Sales ($)'</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="s1">'Product'</span><span class="p">)</span>
+
+    <span class="n">dash_manager</span><span class="o">.</span><span class="n">add_figure</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+
+    <span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'W1'</span><span class="p">,</span> <span class="s1">'W3'</span><span class="p">,</span> <span class="s1">'W5'</span><span class="p">,</span> <span class="s1">'W7'</span><span class="p">,</span> <span class="s1">'W9'</span><span class="p">,</span> <span class="s1">'W10'</span><span class="p">]</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+    <span class="n">plot_class</span> <span class="o">=</span> <span class="n">plot_class</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plot_class</span><span class="o">.</span><span class="n">vertical_waterfall</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">'Categories'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Value'</span><span class="p">,</span>
+                                        <span class="n">title</span><span class="o">=</span><span class="s1">'Vertical Waterfall'</span><span class="p">,</span> <span class="n">baseline</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="n">dash_manager</span><span class="o">.</span><span class="n">add_figure</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+
+    <span class="n">y_axis_data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Jan'</span><span class="p">,</span> <span class="s1">'Feb'</span><span class="p">,</span> <span class="s1">'Mar'</span><span class="p">,</span> <span class="s1">'Apr'</span><span class="p">,</span> <span class="s1">'May'</span><span class="p">,</span> <span class="s1">'Jun'</span><span class="p">,</span> <span class="s1">'Jul'</span><span class="p">,</span> <span class="s1">'Aug'</span><span class="p">,</span> <span class="s1">'Sep'</span><span class="p">,</span> <span class="s1">'Oct'</span><span class="p">,</span> <span class="s1">'Nov'</span><span class="p">,</span> <span class="s1">'Dec'</span><span class="p">]</span>
+    <span class="n">x_axis_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">2008</span><span class="p">,</span> <span class="mi">2009</span><span class="p">,</span> <span class="mi">2010</span><span class="p">,</span> <span class="mi">2011</span><span class="p">,</span> <span class="mi">2012</span><span class="p">,</span> <span class="mi">2013</span><span class="p">,</span> <span class="mi">2014</span><span class="p">,</span> <span class="mi">2017</span><span class="p">,</span> <span class="mi">2019</span><span class="p">,</span> <span class="mi">2021</span><span class="p">,</span> <span class="mi">2023</span><span class="p">]</span>
+
+    <span class="n">correlation</span> <span class="o">=</span> <span class="n">PlotGenerator</span><span class="o">.</span><span class="n">Correlation</span><span class="p">()</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_axis_data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_axis_data</span><span class="p">))</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">correlation</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">y_axis_data</span><span class="p">,</span> <span class="n">x_axis_data</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">'Year'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Month'</span><span class="p">,</span>
+                              <span class="n">title</span><span class="o">=</span><span class="s1">'Monthly '</span>
+                                    <span class="s1">'Data Heatmap'</span><span class="p">)</span>
+    <span class="n">dash_manager</span><span class="o">.</span><span class="n">add_figure</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+
+    <span class="n">marker_shapes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'square'</span><span class="p">,</span> <span class="s1">'circle'</span><span class="p">,</span> <span class="s1">'diamond'</span><span class="p">]</span>  <span class="c1"># Plotly symbol names</span>
+    <span class="n">x_values</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">)),</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))]</span>  <span class="c1"># Example x-axis values for each group</span>
+    <span class="n">series_data</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="n">i</span> <span class="o">**</span> <span class="mf">1.3</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">*</span> <span class="mf">30.0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)],</span>
+        <span class="p">[</span><span class="n">i</span> <span class="o">**</span> <span class="mf">1.5</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">*</span> <span class="mf">40.0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)],</span>
+        <span class="p">[</span><span class="n">i</span> <span class="o">**</span> <span class="mf">1.2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">*</span> <span class="mf">20.0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+    <span class="p">]</span>
+
+    <span class="n">correlation</span> <span class="o">=</span> <span class="n">correlation</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">correlation</span><span class="o">.</span><span class="n">scatter_plot</span><span class="p">(</span><span class="n">marker_shapes</span><span class="p">,</span> <span class="n">x_values</span><span class="p">,</span> <span class="n">series_data</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'My Scatter Plot'</span><span class="p">,</span>
+                                   <span class="n">xlabel</span><span class="o">=</span><span class="s1">'X-Axis'</span><span class="p">,</span>
+                                   <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Y-Axis'</span><span class="p">)</span>
+    <span class="n">dash_manager</span><span class="o">.</span><span class="n">add_figure</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+
+    <span class="n">xAxisvalue</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'8:00 PM'</span><span class="p">,</span> <span class="s1">'9:00 PM'</span><span class="p">,</span> <span class="s1">'10:00 PM'</span><span class="p">,</span> <span class="s1">'12:00 PM'</span><span class="p">,</span> <span class="s1">'1:00 AM'</span><span class="p">,</span> <span class="s1">'3:00 AM'</span><span class="p">,</span> <span class="s1">'4:00 AM'</span><span class="p">,</span> <span class="s1">'5:00 AM'</span><span class="p">]</span>
+    <span class="n">predictedLine</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
+    <span class="n">actualLine</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">37</span><span class="p">]</span>
+    <span class="n">timeseries</span> <span class="o">=</span> <span class="n">PlotGenerator</span><span class="o">.</span><span class="n">Timeseries</span><span class="p">()</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">timeseries</span><span class="o">.</span><span class="n">line_plot</span><span class="p">(</span><span class="n">xAxisvalue</span><span class="p">,</span> <span class="n">predictedLine</span><span class="p">,</span> <span class="n">actualLine</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Line Chart'</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">'Time'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Value'</span><span class="p">)</span>
+
+    <span class="n">dash_manager</span><span class="o">.</span><span class="n">add_figure</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+
+    <span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Category A'</span><span class="p">,</span> <span class="s1">'Category B'</span><span class="p">,</span> <span class="s1">'Category C'</span><span class="p">,</span> <span class="s1">'Category D'</span><span class="p">]</span>
+    <span class="n">series_data</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+    <span class="p">]</span>
+    <span class="n">series_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Series 1'</span><span class="p">,</span> <span class="s1">'Series 2'</span><span class="p">,</span> <span class="s1">'Series 3'</span><span class="p">]</span>
+
+    <span class="c1"># Optional parameters</span>
+    <span class="n">optional_params</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">'title'</span><span class="p">:</span> <span class="s1">'Stacked Bar Chart Example'</span><span class="p">,</span>
+        <span class="s1">'xlabel'</span><span class="p">:</span> <span class="s1">'Categories'</span><span class="p">,</span>
+        <span class="s1">'ylabel'</span><span class="p">:</span> <span class="s1">'Value'</span><span class="p">,</span>
+        <span class="s1">'theme'</span><span class="p">:</span> <span class="s1">'plotly'</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="c1"># Create the stacked bar chart</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">timeseries</span><span class="o">.</span><span class="n">stack_bar</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">series_data</span><span class="p">,</span> <span class="n">series_names</span><span class="p">,</span> <span class="o">**</span><span class="n">optional_params</span><span class="p">)</span>
+
+    <span class="n">dash_manager</span><span class="o">.</span><span class="n">add_figure</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+
+    <span class="n">dash_manager</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright CONFIDENTIAL - Do Not Distribute. Copyright will be enforced..
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>

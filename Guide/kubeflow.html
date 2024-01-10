@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>2. Getting Started with Kubeflow &#8212; MYCELIUM  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=83e35b93" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css?v=79c92029" />
+    <link rel="stylesheet" type="text/css" href="../_static/_style.css?v=a28cf678" />
+    <link rel="stylesheet" type="text/css" href="../_static/_style.css?v=a28cf678" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Platform Introduction Tutorial" href="dashboard.html" />
+    <link rel="prev" title="1. CI-CD Procedures" href="ci-cd.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=white data-md-color-accent=black>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#Guide/kubeflow" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="MYCELIUM  documentation"
+           class="md-header-nav__button md-logo">
+          
+            &nbsp;
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">MYCELIUM</span>
+          <span class="md-header-nav__topic"> 2. Getting Started with Kubeflow </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">MYCELIUM  documentation</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="MYCELIUM documentation" class="md-nav__button md-logo">
+      
+        <img src="../_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../index.html"
+       title="MYCELIUM documentation">MYCELIUM</a>
+  </label>
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">INTRODUCTION</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="purpose.html" class="md-nav__link">1. Statement of Purpose</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="guidelines.html" class="md-nav__link">2. Rules and Procedure</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="chain-of-command.html" class="md-nav__link">3. Chain of Command</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">GUIDE</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="ci-cd.html" class="md-nav__link">1. CI-CD Procedures</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> 2. Getting Started with Kubeflow </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">2. Getting Started with Kubeflow</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#guide-kubeflow--page-root" class="md-nav__link">2. Getting Started with Kubeflow</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#data-pipelines-in-kubeflow" class="md-nav__link">2.1. Data Pipelines in Kubeflow</a>
+        </li>
+        <li class="md-nav__item"><a href="#the-kubeflow-workflow" class="md-nav__link">2.2. The Kubeflow “Workflow”</a>
+        </li>
+        <li class="md-nav__item"><a href="#ml-workflow-phases" class="md-nav__link">2.3. ML Workflow “Phases”</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/Guide/kubeflow.rst.txt">Show Source</a> </li>
+
+  </ul>
+</nav>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="dashboard.html" class="md-nav__link">3. Platform Introduction Tutorial</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">EXAMPLES</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/notebooks.html" class="md-nav__link">1. Create a Kubeflow Notebook</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/katib.html" class="md-nav__link">2. Optimize Parameters</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/tensorboards.html" class="md-nav__link">3. Visualize Train and Test Results</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../Examples/plot-overview.html" class="md-nav__link">4. Plotting</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">REFERENCES</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium.html" class="md-nav__link">Mycelium.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">database/</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Inchworm.html" class="md-nav__link">Inchworm.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Tree.html" class="md-nav__link">Tree.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Branch.html" class="md-nav__link">Branch.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Crawler.html" class="md-nav__link">Crawler.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">models/</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Hyphae.html" class="md-nav__link">Hyphae.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/LLAMA.html" class="md-nav__link">LLAMA.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Psilocybin.html" class="md-nav__link">Psilocybin.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">analytics/</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Plot.html" class="md-nav__link">Plot.py</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../References/Mycelium/Cap.html" class="md-nav__link">Cap.py</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#guide-kubeflow--page-root" class="md-nav__link">2. Getting Started with Kubeflow</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#data-pipelines-in-kubeflow" class="md-nav__link">2.1. Data Pipelines in Kubeflow</a>
+        </li>
+        <li class="md-nav__item"><a href="#the-kubeflow-workflow" class="md-nav__link">2.2. The Kubeflow “Workflow”</a>
+        </li>
+        <li class="md-nav__item"><a href="#ml-workflow-phases" class="md-nav__link">2.3. ML Workflow “Phases”</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/Guide/kubeflow.rst.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="getting-started-with-kubeflow">
+<span id="getting-started"></span><h1 id="guide-kubeflow--page-root"><span class="section-number">2. </span>Getting Started with Kubeflow<a class="headerlink" href="#guide-kubeflow--page-root" title="Link to this heading">¶</a></h1>
+<p>What is Kubeflow? Kubeflow is an machine learning operations <strong>MLOPS</strong> framework designed for data scientists. Kubeflow manages data science pipelines, including data <em>exploration</em> <em>notebooks</em>, model training, <em>serving</em>, metadata tracking, and other workflows. It’s an ideal tool for experimenting with ML pipelines and deploying ML systems to various environments for development, testing, and production-level serving.</p>
+<p>Why Kubeflow? Kubeflow’s primary focus is on making the best libraries modular, scalable, and reliable. It allows customization at each stage of the “Kubeflow workflow,” which includes: <strong>model prep, training, serving, and monitoring</strong>, see below. Whether you’re just starting out with Kubernetes or you’re a seasoned user, Kubeflow can help streamline your ML workloads locally, on-premises, or in a cloud environment.</p>
+<section id="data-pipelines-in-kubeflow">
+<h2 id="data-pipelines-in-kubeflow"><span class="section-number">2.1. </span>Data Pipelines in Kubeflow<a class="headerlink" href="#data-pipelines-in-kubeflow" title="Link to this heading">¶</a></h2>
+<p>Developing and deploying a machine learning (ML) pipeline is an iterative process, involving several stages. This process requires cyclical adjustments and evaluations throughout its development. Pipelines manage these iterative process, using conceptual workflows.</p>
+<a class="reference internal image-reference" href="../_images/diagram_ml-ops.png"><img alt="../_images/diagram_ml-ops.png" class="align-center" src="../_images/diagram_ml-ops.png" style="width: 50%;"/></a>
+</section>
+<section id="the-kubeflow-workflow">
+<h2 id="the-kubeflow-workflow"><span class="section-number">2.2. </span>The Kubeflow “Workflow”<a class="headerlink" href="#the-kubeflow-workflow" title="Link to this heading">¶</a></h2>
+<p>In Kubernetes, a Pod represents a set of running containers on your cluster. (Often the relationship is 1 pod to 1 container). These pods have a defined “lifecycle.” For example, a pod is running in your cluster, then a critical fault occurs on the node where the pod is running, means all the pods on that node fail.</p>
+</section>
+<section id="ml-workflow-phases">
+<h2 id="ml-workflow-phases"><span class="section-number">2.3. </span>ML Workflow “Phases”<a class="headerlink" href="#ml-workflow-phases" title="Link to this heading">¶</a></h2>
+<p>However, to make life considerably easier, you don’t need to manage each Pod directly. Instead, you use kubernetes workload resources or resource controllers. There is a two phase process: <em>the experimental phase</em> wherein the model is discovered, and <em>the production phase</em> wherein the model is deployed and monitored.</p>
+<table id="id1">
+<caption><span class="caption-text">PHASE I - EXPERIMENTAL PHASE</span><a class="headerlink" href="#id1" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%"/>
+<col style="width: 50.0%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Description</p></th>
+<th class="head"><p>Images</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>In the experimental phase, the data and model are selected. The model is developed, tested, and updated iteratively based on initial assumptions to achieve the desired results. This involves:</p>
+<ol class="arabic simple">
+<li><p><strong>Data analytics:</strong> Collecting and analyzing the necessary data to train the ML model using statistics, baseline models, or other analytics tools.</p></li>
+<li><p><strong>Selecting &amp; Coding</strong> (TF, PyTorch, scikit-learn, or XGBoost) the initial model version (Jupyter Notebook &amp; Pipelines)</p></li>
+<li><p><strong>Tuning the model’s hyper-parameters</strong> for efficient processing and accurate results (Katib)</p></li>
+</ol>
+</td>
+<td><img alt="../_images/phase_experimental.png" src="../_images/phase_experimental.png"/>
+</td>
+</tr>
+</tbody>
+</table>
+<table id="id2">
+<caption><span class="caption-text">PHASE II - PRODUCTION PHASE</span><a class="headerlink" href="#id2" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50.0%"/>
+<col style="width: 50.0%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Description</p></th>
+<th class="head"><p>Images</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>In the production phase, a system is deployed and continuously infers and monitors. The phases should contain steps that look like the following:</p>
+<ol class="arabic simple">
+<li><p><strong>Serving the model</strong> for online prediction or batch mode running. (TF Serving)</p></li>
+<li><p><strong>Monitoring the model’s performance</strong> and incorporating the results into the tuning or retraining processes of the model.</p></li>
+</ol>
+</td>
+<td><img alt="../_images/phase_prod.png" src="../_images/phase_prod.png"/>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="ci-cd.html" title="1. CI-CD Procedures"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> "Previous" </span> <span class="section-number">1. </span>CI-CD Procedures </span>
+              </div>
+            </a>
+          
+          
+            <a href="dashboard.html" title="3. Platform Introduction Tutorial"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> "Next" </span> <span class="section-number">3. </span>Platform Introduction Tutorial </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright CONFIDENTIAL - Do Not Distribute. Copyright will be enforced..
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>
