@@ -1,5 +1,22 @@
 @charset "utf-8";
+
+:root {
+    --text-color-black: #2e303e; /* Default text color (light mode) */
+    --bg-color-white: #fff; /* Default background color (light mode) */
+    --text-color-light: #2b2b2b;
+    --primary-bg-color: #e4e4e4;
+}
+
+.dark-mode {
+    --bg-color-white: #2e303e; /* Dark mode background color */
+    --text-color-black: #fff; /* Dark mode text color */
+    --text-color-light: #d2d7f99e;
+    --primary-bg-color: #0a314d;
+}
+
  body{
+    background-color: var(--bg-color-white);
+    color: var(--text-color-light);
     font-size:16px;
     max-width:100%;
     font-family:"Poppins", sans-serif
@@ -39,7 +56,7 @@ h1{
     font-weight: 700;
     font-size:2.5em;
     margin:.67em 0;
-    color: #000;
+    color: var(--text-color-black);
 }
 
 
@@ -233,9 +250,9 @@ table.docutils img{
 
 .md-logo{
     background-image:url(mycelium-icon.svg);
-    background-size:cover;
+    background-size:contain;
     background-repeat:no-repeat;
-    width:150% !important;
+    width: 40px !important;
 }
 
 /* img[alt='../_images/ml-ops.png']{
@@ -291,4 +308,65 @@ img[alt='../_images/mycelium.png']{
 
 div.section dl.field-list dt:first-child {
     display: none;
+}
+
+
+#toggleBtn .dark-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+#toggleBtn .light-icon {
+    display: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+body.dark-mode #toggleBtn .dark-icon {
+    display: none;
+}
+body.dark-mode #toggleBtn .light-icon {
+    display: block;
+    fill: #ffffff80; 
+}
+
+.navheader {
+    display: flex;
+}
+.md-header {
+    height: auto;
+    background-color: var(--bg-color-white) !important;
+    color: var(--text-color-black) !important;
+}
+body.dark-mode .md-header {
+    background-color: var(--primary-bg-color) !important;
+}
+.md-search__form .md-search__input {
+    background-color: rgba(0, 0, 0, .07);
+}
+body.dark-mode .md-search__form .md-search__input {
+    background-color: rgba(255, 255, 255, .14);
+}
+.md-header-nav {
+    padding: 1rem 1.5rem;
+}
+
+body.dark-mode .md-header[data-md-state=shadow] {
+    box-shadow: unset;
+}
+
+.md-footer-nav,
+.md-footer-meta {
+    background-color: var(--primary-bg-color);
+    color: var(--text-color-black);
+}
+
+.md-footer-copyright,
+.md-footer-nav__direction,
+.md-footer-copyright__highlight,
+html .md-footer-meta.md-typeset a {
+    color: var(--text-color-black);
+
 }

@@ -465,9 +465,6 @@ hr{
     position:relative;
     vertical-align:top
 }
-.md-flex__cell--shrink{
-    width:0
-}
 .md-flex__cell--stretch{
     display:table;
     width:100%;
